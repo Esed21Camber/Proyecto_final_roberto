@@ -126,4 +126,52 @@ list(
   tratamiento = "Antivirales, antihistaminicos para picazon, cuidado de lesiones"
 ),
 
+# ENFERMEDADES BACTERIANAS
+list(
+  nombre = "Fiebre Tifoidea",
+  microorganismo = "Salmonella Typhi",
+  tipo = "Bacteriana",
+  sintomas_clave = c("fiebre_alta", "dolor_abdominal", "dolor_cabeza", "debilidad", "diarrea"),
+  sintomas_especificos = "Fiebre que aumenta progresivamente, dolor abdominal, manchas rosadas en tronco",
+  descripcion = "Infeccion bacteriana sistemica por Salmonella Typhi",
+  transmision = "Agua o alimentos contaminados con heces humanas",
+  prevencion = "Agua potable, higiene alimentaria, vacunacion para viajeros",
+  tratamiento = "Antibioticos especificos, hidratacion"
+),
+
+list(
+  nombre = "Tuberculosis",
+  microorganismo = "Mycobacterium tuberculosis",
+  tipo = "Bacteriana",
+  sintomas_clave = c("tos_productiva", "fiebre", "debilidad", "escalofrios", "perdida_apetito"),
+  sintomas_especificos = "Tos con flemas por mas de 2 semanas, sudores nocturnos, perdida de peso",
+  descripcion = "Infeccion bacteriana que afecta principalmente los pulmones",
+  transmision = "Gotitas respiratorias en el aire al toser o estornudar",
+  prevencion = "Vacuna BCG, ventilacion adecuada, identificacion y tratamiento temprano",
+  tratamiento = "Combinacion de antibioticos por 6-9 meses"
+),
+
+list(
+  nombre = "Colera",
+  microorganismo = "Vibrio cholerae",
+  tipo = "Bacteriana",
+  sintomas_clave = c("diarrea", "vomito", "dolor_abdominal"),
+  sintomas_especificos = "Diarrea acuosa, deshidratacion rapida",
+  descripcion = "Infeccion intestinal aguda causada por Vibrio cholerae",
+  transmision = "Agua o alimentos contaminados con heces humanas",
+  prevencion = "Agua potable, saneamiento adecuado, higiene de alimentos",
+  tratamiento = "Rehidratacion inmediata, antibioticos en casos severos"
+),
+
+list(
+  nombre = "Faringitis Estreptococica",
+  microorganismo = "Streptococcus pyogenes",
+  tipo = "Bacteriana",
+  sintomas_clave = c("dolor_garganta", "fiebre", "dolor_cabeza", "debilidad"),
+  sintomas_especificos = "Dolor de garganta intenso, amigdalas inflamadas con pus, fiebre alta",
+  descripcion = "Infeccion bacteriana de la garganta",
+  transmision = "Gotitas respiratorias, contacto directo",
+  prevencion = "Lavado de manos, no compartir utensilios",
+  tratamiento = "Antibioticos para prevenir complicaciones"
+),
 
