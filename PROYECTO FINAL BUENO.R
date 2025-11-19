@@ -77,6 +77,7 @@ capturar_sintomas <- function() {
   return(sintomas)
 }
 
+base_datos_enfermedades <- list(
 # ENFERMEDADES VIRALES
 list(
   nombre = "Influenza (Gripe)",
