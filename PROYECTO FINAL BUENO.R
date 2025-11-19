@@ -77,7 +77,53 @@ capturar_sintomas <- function() {
   return(sintomas)
 }
 
+# ENFERMEDADES VIRALES
+list(
+  nombre = "Influenza (Gripe)",
+  microorganismo = "Virus de la Influenza",
+  tipo = "Viral",
+  sintomas_clave = c("fiebre_alta", "tos", "dolor_muscular", "debilidad", "dolor_cabeza"),
+  sintomas_especificos = "Fiebre alta, dolores musculares intensos",
+  descripcion = "Infeccion viral respiratoria aguda estacional",
+  transmision = "Salvia, contacto directo",
+  prevencion = "Vacunacion anual, lavado de manos, evitar multitudes",
+  tratamiento = "Reposo, hidratacion, antivirales si se detecta temprano"
+),
+
+list(
+  nombre = "COVID-19",
+  microorganismo = "SARS-CoV-2",
+  tipo = "Viral",
+  sintomas_clave = c("fiebre", "tos", "dificultad_respirar", "debilidad", "perdida_apetito"),
+  sintomas_especificos = "Perdida del olfato/gusto, dificultad respiratoria progresiva",
+  descripcion = "Enfermedad respiratoria causada por coronavirus",
+  transmision = "Saliva, aerosoles, contacto con superficies",
+  prevencion = "Vacunacion, mascarillas, ventilacion, distanciamiento",
+  tratamiento = "Aislamiento, tratamiento sintomatico, antivirales especificos"
+),
+
+list(
+  nombre = "Dengue",
+  microorganismo = "Virus Dengue",
+  tipo = "Viral",
+  sintomas_clave = c("fiebre_alta", "dolor_muscular", "dolor_articulaciones", "dolor_cabeza", "sarpullido"),
+  sintomas_especificos = "Dolor detras de los ojos, dolor articular intenso, sarpullido caracteristico",
+  descripcion = "Enfermedad viral transmitida por mosquitos Aedes",
+  transmision = "Picadura de mosquito Aedes aegypti infectado",
+  prevencion = "Control de mosquitos, repelentes, mosquiteros, eliminar criaderos",
+  tratamiento = "Hidratacion, control de fiebre, NO usar aspirina"
+),
+
+list(
+  nombre = "Varicela",
+  microorganismo = "Virus Varicela-Zoster",
+  tipo = "Viral",
+  sintomas_clave = c("fiebre", "vesiculas", "picazon", "debilidad", "sarpullido"),
+  sintomas_especificos = "Ampollas que se vuelven costras, lesiones en diferentes etapas",
+  descripcion = "Infeccion viral altamente contagiosa con erupcion cutanea caracteristica",
+  transmision = "Saliva, contacto directo con lesiones vesiculares",
+  prevencion = "Vacunacion, evitar contacto con enfermos",
+  tratamiento = "Antivirales, antihistaminicos para picazon, cuidado de lesiones"
+),
 
 
-#####################hihedukuhljsl
-###################ljidoeño
