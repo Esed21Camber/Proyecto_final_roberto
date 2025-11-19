@@ -270,3 +270,45 @@ analizar_sintomas <- function(sintomas_usuario) {
   }
 }
 
+mostrar_resultados <- function(resultados) {
+  cat("\n")
+  cat("RESULTADOS DEL ANALISIS:\n")
+  
+  cat("IMPORTANTE: Esto es solo informativo. No es un diagnostico medico.\n")
+  cat("Siempre consulta a un profesional de la salud.\n\n")
+  
+  if(length(resultados) == 0) {
+    cat("No se encontraron coincidencias significativas en la base de datos.\n")
+    cat("Tus sintomas podrian ser leves o requerir evaluacion medica especializada.\n")
+    cat("Recomendacion: Consulta a tu medico para una evaluacion adecuada.\n")
+    return()
+  }
+  
+  for(i in 1:length(resultados)) {
+    enf <- resultados[[i]]$enfermedad
+    cat("POSIBILIDAD", i, "(Puntaje:", resultados[[i]]$puntaje, "):\n")
+    cat("Enfermedad:", enf$nombre, "\n")
+    cat("Microorganismo:", enf$microorganismo, "(", enf$tipo, ")\n")
+    cat("Sintomas caracteristicos:", enf$sintomas_especificos, "\n")
+    cat("Descripcion:", enf$descripcion, "\n")
+    cat("Transmision:", enf$transmision, "\n")
+    cat("Prevencion:", enf$prevencion, "\n")
+    cat("Tratamiento general:", enf$tratamiento, "\n")
+    
+    if(length(resultados[[i]]$sintomas_coincidentes) > 0) {
+      cat("Sintomas coincidentes reportados:\n")
+      for(sintoma in resultados[[i]]$sintomas_coincidentes) {
+        cat("-", sintoma, "\n")
+      }
+    }
+    cat("\n")
+  }
+  
+  cat("RECOMENDACION:\n")
+  cat("- Busca atencion medica\n")
+  
+  cat("El diagnostico definitivo debe ser realizado por un profesional de la salud.\n")
+}
+
+cat("¡Detector de Enfermedades!\n")
+detector_enfermedades()
