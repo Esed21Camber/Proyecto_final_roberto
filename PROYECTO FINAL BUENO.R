@@ -208,3 +208,16 @@ Entamoeba",
   tratamiento = "Metronidazol u otros antiparasitarios específicos"
 ),
 
+# ENFERMEDADES FUNGICAS
+list(
+  nombre = "Candidiasis",
+  microorganismo = "Candida albicans",
+  tipo = "Fungica",
+  sintomas_clave = c("lesiones", "picazon", "sarpullido", "debilidad"),
+  sintomas_especificos = "Placas blancas en mucosa oral o genital, picazon intensa",
+  descripcion = "Infeccion por hongo levaduriforme",
+  transmision = "Contacto directo, proliferacion por factores de riesgo",
+  prevencion = "Higiene personal, ropa adecuada, control de diabetes",
+  tratamiento = "Antifungicos topicos u orales segun localizacion"
+)
+)
