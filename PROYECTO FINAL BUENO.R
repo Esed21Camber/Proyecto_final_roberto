@@ -76,3 +76,8 @@ capturar_sintomas <- function() {
   
   return(sintomas)
 }
+
+
+
+#####################hihedukuhljsl
+###################ljidoeño
