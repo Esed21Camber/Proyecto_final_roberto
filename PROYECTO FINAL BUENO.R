@@ -221,3 +221,52 @@ list(
   tratamiento = "Antifungicos topicos u orales segun localizacion"
 )
 )
+
+analizar_sintomas <- function(sintomas_usuario) {
+  cat("\nAnalizando sintomas con base de datos...\n")
+  Sys.sleep(1)
+  
+  enfermedades_puntaje <- list()
+  
+  for(i in 1:length(base_datos_enfermedades)) {
+    enfermedad <- base_datos_enfermedades[[i]]
+    puntaje <- 0
+    sintomas_coincidentes <- c()
+    
+    for(sintoma_clave in enfermedad$sintomas_clave) {
+      if(!is.null(sintomas_usuario[[sintoma_clave]]) && 
+         sintomas_usuario[[sintoma_clave]] == "si") {
+        puntaje <- puntaje + 2
+        sintomas_coincidentes <- c(sintomas_coincidentes, sintoma_clave)
+      }
+    }
+    
+    if(enfermedad$nombre == "Dengue" && sintomas_usuario$picadura_mosquito == "si") {
+      puntaje <- puntaje + 3
+    }
+    if(enfermedad$nombre == "Fiebre Tifoidea" && sintomas_usuario$agua_contaminada == "si") {
+      puntaje <- puntaje + 3
+    }
+    if(enfermedad$nombre == "Malaria (Paludismo)" && sintomas_usuario$viaje == "si") {
+      puntaje <- puntaje + 4
+    }
+    
+    if(puntaje > 0) {
+      enfermedades_puntaje[[length(enfermedades_puntaje) + 1]] <- list(
+        enfermedad = enfermedad,
+        puntaje = puntaje,
+        sintomas_coincidentes = sintomas_coincidentes
+      )
+    }
+  }
+  
+  if(length(enfermedades_puntaje) > 0) {
+    puntajes <- sapply(enfermedades_puntaje, function(x) x$puntaje)
+    orden <- order(puntajes, decreasing = TRUE)
+    enfermedades_ordenadas <- enfermedades_puntaje[orden]
+    return(enfermedades_ordenadas[1:min(3, length(enfermedades_ordenadas))])
+  } else {
+    return(list())
+  }
+}
+
