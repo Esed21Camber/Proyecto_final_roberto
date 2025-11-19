@@ -1,4 +1,4 @@
- # DETECTOR INFORMATIVO DE ENFERMEDADES
+ # DETECTOR INFORMATIVO DE ENFERMEDADES INFECCIOSAS
 detector_enfermedades <- function() {
   cat("DETECTOR INFORMATIVO DE ENFERMEDADES\n")
   
@@ -173,5 +173,38 @@ list(
   transmision = "Gotitas respiratorias, contacto directo",
   prevencion = "Lavado de manos, no compartir utensilios",
   tratamiento = "Antibioticos para prevenir complicaciones"
+),
+
+# ENFERMEDADES PARASITARIAS
+list(
+  nombre = "Malaria (Paludismo)",
+  microorganismo = "Plasmodium spp.",
+  tipo = "Parasitaria",
+  sintomas_clave = c("fiebre_alta", "escalofrios", "dolor_muscular",
+                     "debilidad", "dolor_cabeza"),
+  sintomas_especificos = "Ciclos de fiebre alta con escalofríos
+intensos y sudoración",
+  descripcion = "Enfermedad parasitaria transmitida por mosquitos
+Anopheles",
+  transmision = "Picadura de mosquito Anopheles hembra infectado",
+  prevencion = "Mosquiteros impregnados, repelentes, quimioprofilaxis
+en zonas endémicas",
+  tratamiento = "Antimaláricos específicos según tipo de Plasmodium"
+),
+
+list(
+  nombre = "Amebiasis",
+  microorganismo = "Entamoeba histolytica",
+  tipo = "Parasitaria",
+  sintomas_clave = c("diarrea_sangre", "dolor_abdominal", "debilidad",
+                     "fiebre"),
+  sintomas_especificos = "Diarrea con moco y sangre, dolor abdominal
+tipo cólico",
+  descripcion = "Infección parasitaria del intestino grueso que puede
+formar abscesos hepáticos",
+  transmision = "Agua o alimentos contaminados con quistes de
+Entamoeba",
+  prevencion = "Agua potable, higiene alimentaria, lavado de manos",
+  tratamiento = "Metronidazol u otros antiparasitarios específicos"
 ),
 
